@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Media Showcase</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <h1>My Favorite Films</h1>
+      </a>
+      <label for="genre-filter"> Genre : </label>
+      <select id="genre-filter">
+        <option value="all">All Genres</option>
+        <option value="action">Action</option>
+        <option value="drama">Drama</option>
+        <option value="comedy">Comedy</option>
+        <option value="horror">Horror</option>
+        <option value="crime">Crime</option>
+        <option value="thriller">Thriller</option>
+      </select>
+    </header>
+
+    <main>
+      <div class="grid-container">
+        <div class="movie" data-genre="horror,thriller">
+          <img src="images/to.webp" alt="The Others" />
+          <h2>The Others</h2>
+          <p>
+            <em>The Others</em> is a thrilling horror film focused on a woman
+            named Grace who lives in a haunting mansion with her two children.
+            As supernatural occurrences start to happen, she becomes convinced
+            that their home is haunted. It explores themes of grief, isolation,
+            and the unknown. Ultimately, the film skillfully escalates tension
+            and mystery, ending in a surprising twist.
+          </p>
+        </div>
+        <div class="movie" data-genre="crime,drama">
+          <img src="images/tg.webp" alt="The Godfather" />
+          <h2>The Godfather</h2>
+          <p>
+            This classic masterpiece begins with Vito Corleone, the patriarch of
+            a powerful Mafia family, becoming the target of rival gangs. As a
+            result, his youngest son, Michael, is drawn into the family's
+            criminal operations. <em>The Godfather</em> explores themes of
+            power, loyalty, and betrayal within a world of organized crime. The
+            casting and storytelling are exceptional, as each actor brings depth
+            to their characters, creating an intricate blend of family
+            relationships and ethical conflicts.
+          </p>
+        </div>
+        <div class="movie" data-genre="comedy">
+          <img src="images/os.webp" alt="Old School" />
+          <h2>Old School</h2>
+          <p>
+            <em>Old School</em> is a comedy about a group of middle-aged friends
+            attempting to relive their college days by forming a fraternity. The
+            film captures their hilarious antics and the ensuing chaos,
+            skillfully blending humor with themes of friendship and nostalgia.
+            The casting is spot on, with each actor perfectly embodying their
+            respective characters. Ultimately, it underscores the importance of
+            embracing life at any age.
+          </p>
+        </div>
+        <div class="movie" data-genre="action">
+          <img src="images/spr.webp" alt="Saving Private Ryan" />
+          <h2>Saving Private Ryan</h2>
+          <p>
+            The movie starts with the D-Day invasion of Normandy during World
+            War II. The story follows Captain Miller leading his troops on a
+            futile mission in enemy territory to find and bring home Private
+            James Ryan. <em>Saving Private Ryan</em> emphasizes the sacrifices
+            soldiers endure during war as they confront numerous battles and
+            losses, ultimately coming to grips with the harsh realities of
+            conflict.
+          </p>
+        </div>
+        <div class="movie" data-genre="drama">
+          <img src="images/sr.webp" alt="Shawshank Redemption" />
+          <h2>The Shawshank Redemption</h2>
+          <p>
+            <em>The Shawshank Redemption</em> tells the story of Andy Dufresne,
+            a banker who is unjustly convicted of murdering his wife. He forms a
+            friendship with fellow inmate "Red" while inside Shawshank
+            Penitentiary. Together, they devise a plan to escape, holding onto
+            hope and resilience despite the brutal conditions of prison life.
+            The film explores themes of hope, friendship, justice, and the
+            pursuit of freedom.
+          </p>
+        </div>
+        <div class="movie" data-genre="crime,thriller">
+          <img src="images/se7en.webp" alt="Se7en" />
+          <h2>Se7en</h2>
+          <p>
+            This film is about morality, justice, and the darkness of human
+            nature. Its story revolves around two detectives investigating a
+            series of gruesome murders inspired by the seven deadly sins—pride,
+            greed, lust, envy, gluttony, wrath, and sloth. Every step they take
+            further into the investigation, they uncover a chilling pattern that
+            leads them to a twisted serial killer. <em>Se7en</em> ends in a
+            shocking conclusion that leaves a lasting impact on viewers.
+          </p>
+        </div>
+      </div>
+      <div class="video-container">
+        <h2>Beautiful Cinematography</h2>
+        <iframe
+          width="461"
+          height="262"
+          src="https://www.youtube.com/embed/-GwyCXa6Tn4?si=gfa3I-sd6wo43_3Z"
+          title="Related Beautiful Cinematography Clips"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="movie-details" id="movie-details" style="display: none">
+        <img id="selected-movie-image" src="images/se7en.webp" alt="" />
+        <h2 id="selected-movie-title"></h2>
+        <p id="selected-movie-description"></p>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Movie Showcase</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
