@@ -21,17 +21,16 @@ const selectedMovieDescription = document.getElementById('selected-movie-descrip
 
 movieImages.forEach(image => {
     image.addEventListener('click', function() {
-        const movie = this.parentElement; // Get the parent movie div
-        const title = movie.querySelector('h2').innerText; // Get the title
-        const description = movie.querySelector('p').innerText; // Get the description
-        const imgSrc = this.src; // Get the image source
+        const movie = this.parentElement; 
+        const title = movie.querySelector('h2').innerText; 
+        const description = movie.querySelector('p').innerText; 
+        const imgSrc = this.src; 
+        
+        localStorage.setItem('selectedMovieImage', imgSrc);
+        localStorage.setItem('selectedMovieTitle', title);
+        localStorage.setItem('selectedMovieDescription', description);
 
-        // Update the details container
-        selectedMovieImage.src = imgSrc;
-        selectedMovieTitle.innerText = title;
-        selectedMovieDescription.innerText = description;
 
-        // Show the details container
-        movieDetails.style.display = 'block';
+        window.location.href = 'movie-details.html';
     });
 });

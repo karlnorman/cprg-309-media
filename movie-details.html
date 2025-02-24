@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Movie Details</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <h1>My Favorite Films</h1>
+      </a>
+      <button id="back-button">Back to Home</button>
+    </header>
+
+    <main>
+      <div class="movie-details" id="details-container">
+        <div class="image-frame">
+          <img id="selected-movie-image" src="" alt="" />
+        </div>
+        <div class="info-frame">
+          <h2 id="selected-movie-title"></h2>
+          <p id="selected-movie-description"></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Media Showcase</p>
+    </footer>
+
+    <script>
+      const movieImage = localStorage.getItem("selectedMovieImage");
+      const movieTitle = localStorage.getItem("selectedMovieTitle");
+      const movieDescription = localStorage.getItem("selectedMovieDescription");
+
+      document.getElementById("selected-movie-image").src = movieImage;
+      document.getElementById("selected-movie-title").innerText = movieTitle;
+      document.getElementById("selected-movie-description").innerText =
+        movieDescription;
+
+      document
+        .getElementById("back-button")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>
